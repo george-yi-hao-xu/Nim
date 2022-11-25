@@ -12,7 +12,7 @@ const player2Container = document.getElementById("player2Container");
 const player2Btn = document.getElementById("player2Btn");
 const player2Text = document.getElementById("player2Input");
 
-// int => list(int)
+// int => array(int)
 let getLegalMove = (numOfCurrentSticks) => {
     switch (numOfCurrentSticks) {
         case 1:
