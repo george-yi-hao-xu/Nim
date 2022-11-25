@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Nim</title>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="game-msgbox" id="gameMsgBox">
+            <p>Welcome to Nim ! <br>There are <b>21</b> sticks on the table.<br>
+                Now it is Player1's turn ;)</p>
+        </div>
+        <div class="player-container">
+            <div class="player-input-enabled" id="player1Container">
+                <textarea name="player1Input" id="player1Input" cols="5" rows="1"></textarea>
+                <button id="player1Btn">Confirm</button>
+            </div>
+            <div class="player-input-disenabled" id="player2Container">
+                <textarea name="player2Input" id="player2Input" cols="5" rows="1"></textarea>
+                <button id="player2Btn">Confirm</button>
+            </div>
+        </div>
+        <script src="nim.js" defer></script>
+    </div>
+</body>
+
+</html>

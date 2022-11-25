@@ -1,0 +1,105 @@
+body {
+    border: 0;
+    padding: 0;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 562px 1000px;
+}
+
+b {
+    color: yellow;
+}
+
+.game-msgbox {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 562px;
+    height: 50px;
+    color: whitesmoke;
+    padding: 50px 0;
+}
+
+.player-container {
+    display: block;
+    width: 562px;
+    height: 600px;
+}
+
+/* enabled */
+
+.player-input-enabled {
+    padding-left: 120px;
+    display: inline-block;
+    width: 120px;
+    height: 300px;
+}
+
+.player-input-enabled textarea {
+    display: block;
+    border: 1;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+}
+
+.player-input-enabled button {
+    width: 58px;
+    text-align: center;
+    border-top-width: 5px;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
+/* disenabled */
+
+.player-input-disenabled {
+    padding-left: 120px;
+    display: inline-block;
+    width: 120px;
+    height: 300px;
+}
+
+.player-input-disenabled textarea {
+    display: block;
+    border: 1;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    background-color: gray;
+}
+
+.player-input-disenabled button {
+    width: 58px;
+    text-align: center;
+    border-top-width: 5px;
+    padding-top: 1px;
+    background-color: gray;
+    color: gray;
+}
+
+/* warning */
+
+.player-input-warning {
+    padding-left: 120px;
+    display: inline-block;
+    width: 120px;
+    height: 300px;
+}
+
+.player-input-warning textarea {
+    display: block;
+    border: 1;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    background-color: red;
+}
+
+.player-input-warning button {
+    width: 58px;
+    text-align: center;
+    border-top-width: 5px;
+    padding-top: 1px;
+    background-color: gray;
+    color: red;
+}
