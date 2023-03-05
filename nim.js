@@ -1,4 +1,4 @@
-const numOfTotalSticks = 21;
+const numOfTotalSticks = 11;
 let numOfCurrentSticks = numOfTotalSticks;
 let isPlayer1turn = true;
 
@@ -25,8 +25,8 @@ let getLegalMove = (numOfCurrentSticks) => {
 };
 
 let otherPlayer = () => {
-    player1Text.value = "";
-    player2Text.value = "";
+    // player1Text.value = "";
+    // player2Text.value = "";
     if (isPlayer1turn) {
         isPlayer1turn = false;
         player1Container.className = "player-input-disenabled";
@@ -40,25 +40,25 @@ let otherPlayer = () => {
 
 let nextMove = () => {
     //const currentPlayerName = isPlayer1turn? "Player1" : "Player2";
-    const numOfPicked = isPlayer1turn ? parseInt(player1Text.value) : parseInt(player2Text.value);
+    const numOfPicked = isPlayer1turn ? parseInt(player1Text.options[player1Text.selectedIndex].value) : parseInt(player2Text.options[player2Text.selectedIndex].value);
     console.log(numOfPicked);
     console.log(getLegalMove(numOfCurrentSticks));
     if (getLegalMove(numOfCurrentSticks).includes(numOfPicked)) {
         numOfCurrentSticks -= numOfPicked;
         if (numOfCurrentSticks == 0) {
             // current player lost; Game Over
-            gameMsgBox.innerText = isPlayer1turn ? "Player 2 WIN !" : "Player 1 WIN !";
+            gameMsgBox.innerHTML = isPlayer1turn ? "<b>Player 2 WIN !</b>" : "<b>Player 1 WIN !</b>";
             player1Container.className = "player-input-disenabled";
             player2Container.className = "player-input-disenabled";
         } else {
             // game ongoing
-            gameMsgBox.innerHTML = `Now there are <b>${numOfCurrentSticks}</b> on the table. <br> It is ${isPlayer1turn ? "Player2" : "Player1"}'s turn`;
+            gameMsgBox.innerHTML = `<b>${numOfCurrentSticks}</b> LEFT <br> ${isPlayer1turn ? "Player2" : "Player1"} 's turn`;
             otherPlayer();
         }
     }
     else {
         console.log("error: please pick legal moves");
-        gameMsgBox.innerHTML = `Now there are <b>${numOfCurrentSticks}</b> on the table. <br> It is ${isPlayer1turn ? "Player2" : "Player1"}'s turn.<br> Please pick ${getLegalMove(numOfCurrentSticks)} stick(s)`;
+        gameMsgBox.innerHTML = `Warning:<b>${numOfCurrentSticks}</b> Left. <br> ${isPlayer1turn ? "Player1" : "Player2" } 's turn.<br> Please pick ${getLegalMove(numOfCurrentSticks)} stick(s)`;
         if (isPlayer1turn) {
             player1Container.className = "player-input-warning";
             player1Text.value = "";

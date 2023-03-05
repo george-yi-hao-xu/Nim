@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-new.css">
+    <title>Nim</title>
+    <link rel="icon" type="image/x-icon" href="/image/match.ico">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <div id="gameContent">
+            <div class="game-msgbox" id="gameMsgBox">
+                <p class="game-rule-texts">Welcome to Nim ! </p>
+                <p class="game-rule-texts">There are <b>11</b> sticks on the table.</p>
+                <p class="game-rule-texts">Now it is Player1's turn.</p>
+                <p class="game-rule-texts">You can pick at most 3 sticks, and the last player to draw all sticks is the
+                    one who loses the game.</p>   
+            </div>
+            <div class="player-container">
+                <div class="player-content">
+                    <div class="player-input-enabled" id="player1Container">
+                        <p class="player-name">Player1</p>
+                        <select name="player1Input" id="player1Input">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <button id="player1Btn">Confirm</button>
+                    </div>
+                    <div class="player-input-disenabled" id="player2Container">
+                        <p class="player-name">Player2</p>
+                        <select name="player2Input" id="player2Input">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <button id="player2Btn">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="nim.js" defer></script>
+    </div>
+</body>
+
+</html>
