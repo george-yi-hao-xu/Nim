@@ -5,12 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Nim</title>
+    <link rel="stylesheet" href="style-new.css" type="text/css">
+    <title>Simple Nim</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
-    <div class="game-container">
+    <div id="titleContainer">
+        <h1>S<span class="shrink">IMPLE</span> N<span class="shrink">IM</span></h1>
+    </div>
+    <div id="ruleContainer">
+        <div class="rule-contents-flexbox">
+            <div class="rule-contents">
+                <p class="game-rule-texts">Simple Nim is a game of strategy in which two players take turns removing objects from one pile. </p>
+                <p class="game-rule-texts">On each turn, a player must remove at least one object, but no more than three ones. </p>
+                <p class="game-rule-texts">The goal of this game is to avoid taking the last object.</p>
+                <button id="playGameBtn">PLAY</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div >
+        <iframe id="musicBox" style="border-radius:12px" src="https://open.spotify.com/embed/track/4nvvo6gz1SpSPeSYvOnwfN?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div> -->
+    <!-- <div id="gameContainer">
         <div class="game-msgbox" id="gameMsgBox">
             <p>Welcome to Nim ! <br>There are <b>21</b> sticks on the table.<br>
                 Now it is Player1's turn ;) You can pick at most 3 sticks, and the last player to draw all sticks is the
@@ -27,7 +44,7 @@
             </div>
         </div>
         <script src="nim.js" defer></script>
-    </div>
+    </div> -->
 </body>
 
 </html>

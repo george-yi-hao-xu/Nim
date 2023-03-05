@@ -1,0 +1,98 @@
+:root{
+    --color-high-light: wheat;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    background-color: black;
+    font-family: 'Roboto',sans-serif;
+    width: 100vw;
+    height: 100vh;
+    min-width: 600px;
+}
+.shrink{
+    font-size: 0.9em;
+}
+#musicBox{
+    position: fixed;
+    width: 300px;
+    height: 80px;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+    padding: 0;
+}
+#titleContainer{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#titleContainer h1{
+    display: block;
+    width: 50%;
+    min-width: 600px;
+    margin: 10% auto;
+    text-align: center;
+    font-size: 12vh;
+    color: var(--color-high-light);
+    font-family: 'Roboto',sans-serif;
+}
+#ruleContainer{
+    display: block;
+    position: fixed;
+    width: 70%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 30px;
+    transition: 1s ease;
+    animation-name: appearFromBottom;
+    animation-duration: 2s;
+    z-index: 100;
+}
+.rule-contents-flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.rule-contents{
+    margin: 0;
+    padding: 30px 60px;
+    border: solid 1px var(--color-high-light);
+    background-color: black;
+}
+.game-rule-texts{
+    text-align: center;
+    min-width: 600px;
+}
+#playGameBtn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+#playGameBtn:hover{
+    box-shadow: 0 0 60px var(--color-high-light);
+    transform: scale(1.05);
+}
+
+@keyframes appearFromBottom{
+    from{
+        top: 100vh;
+    }
+    to{
+        
+    }
+}
